@@ -1,3 +1,12 @@
+#gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #141517; 
+  --gradient-color-2: #0E1D20; 
+  --gradient-color-3: #275A65;  
+  --gradient-color-4: #083944;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +20,7 @@ html {
 body {
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #141517, #0E1D20);
-  padding: 4rem
+  background-color: #141517;
 }
 
 h1 {
@@ -48,10 +56,28 @@ span {
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 4rem;
 }
 
 .limit {
   max-width: 600px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.gradient {
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+}
+
+/* Gradient from transparent to black */
+
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #141517);
 }
